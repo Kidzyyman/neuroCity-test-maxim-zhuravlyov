@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Neurocity</title>
+	<link rel="stylesheet" href="./styles.css">
+
+</head>
+
+<body>
+
+	<div class="element__title">Slider</div>
+	<section class='slider-section'>
+		<div class="slider-section-wrap">
+			<div class="slider" id="slider">
+				<div class="holder">
+					<div class="slide-wrapper">
+						<div class="slide"><img class="slide-image" src="./assets/slide-1.jpg" /></div>
+						<span class="temp">1</span>
+					</div>
+					<div class="slide-wrapper">
+						<div class="slide"><img class="slide-image" src="./assets/slide-2.jpg" /></div>
+						<span class="temp">2</span>
+					</div>
+					<div class="slide-wrapper">
+						<div class="slide"><img class="slide-image" src="./assets/slide-3.jpg" /></div>
+						<span class="temp">3</span>
+					</div>
+				</div>
+
+			</div>
+			<div class="btns-slider">
+				<button class="prev-button-slider">Prev</button>
+				<button class="next-button-slider">Next</button>
+			</div>
+
+		</div>
+
+	</section>
+
+
+
+
+	<section class="figure">
+		<div class="element__title">Figures</div>
+		<div class="container">
+			<h2 id="figure-TextStart">
+				Сlick To Show The Figures</h2>
+			<canvas class='myCanvas' id="myCanvas" width="800" height="600"></canvas>
+		</div>
+	</section>
+
+
+
+	<section class='video'>
+		<div class="element__title">Video</div>
+		<div class='container'>
+			<div id="video-container" class='video-container'>
+				<video src="./assets/video.webm" preload="metadata"></video>
+				<div id="time">00:00:000</div>
+			</div>
+		</div>
+	</section>
+
+
+	<div class="element__title">Getting Data</div>
+	<section class='getData'>
+
+		<div class='container'>
+			<button id="get-data">Получить данные</button>
+			<div class='data-container' id="data-container"></div>
+			<div class="page-buttons">
+				<button class="prev-button-fetcher" disabled>Prev</button>
+				<span class="current-page">1</span>
+				<button class="next-button-fetcher">Next</button>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="element">
+		<h2 class="element__title title">Debounce Elements</h2>
+		<button type="button" aria-label="click" class="element__button button">Нажми</button>
+		<div class="element__display">
+			<article class="element__article article__left">
+				<p class="element__text">Элемент 1</p>
+			</article>
+			<article class="element__article article__right">
+				<p class="element__text">Элемент 2</p>
+			</article>
+			<article class="element__article article__top">
+				<p class="element__text">Элемент 3</p>
+			</article>
+		</div>
+	</section>
+
+
+	<section class="form">
+		<h2 class="element__title title">FormValidator</h2>
+		<div class="container">
+			<form id="my-form">
+				<div>
+					<label for="name">Имя:</label>
+					<input type="text" id="name" name="name">
+				</div>
+				<div>
+					<label for="phone">Телефон:</label>
+					<input type="text" id="phone" name="phone">
+				</div>
+				<div>
+					<label for="password">Пароль:</label>
+					<input type="password" id="password" name="password">
+				</div>
+				<div>
+					<label for="password-confirm">Повторите пароль:</label>
+					<input type="password" id="password-confirm" name="password-confirm">
+				</div>
+				<button type="submit">Отправить</button>
+			</form>
+			<div id="error-message" class='error-message'></div>
+		</div>
+	</section>
+
+
+
+
+
+	<section class='random-cubes'>
+
+		<div class="container">
+			<h2 class="element__title title">RandomizeCubes</h2>
+			<div class="container-cubes" id='container-cubes'>
+			</div>
+
+			<button class='random-cubes__btn' id='random-cubes__btn'>Get Random Cubes</button>
+		</div>
+
+	</section>
+
+
+
+
+
+
+	<script src='./js/index.js' type='module'></script>
+
+
+</body>
+
+</html>

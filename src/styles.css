@@ -1,0 +1,409 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab:100);
+/* base */
+
+.animate {
+	transition: transform 0.3s ease-out;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	height: 200px;
+	background: linear-gradient(to right, #f6efd2, #cead78);
+	padding: 2rem;
+}
+
+.container {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 2rem;
+	text-align: center;
+	overflow: hidden;
+}
+
+/* slider */
+.slider-section {
+	position: relative;
+	min-height: 600px;
+	padding: 0 2rem;
+}
+
+.slider-section-wrap {
+	width: 300px;
+	height: 500px;
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
+	top: 50%;
+	margin-top: -225px;
+}
+
+.slider {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	filter: drop-shadow(2px 2px 7px grey);
+}
+
+.ms-touch.slider {
+	overflow-x: scroll;
+	overflow-y: hidden;
+
+	-ms-overflow-style: none;
+
+	-ms-scroll-chaining: none;
+
+	-ms-scroll-snap-type: mandatory;
+
+	-ms-scroll-snap-points-x: snapInterval(0%, 100%);
+}
+
+.holder {
+	width: 300%;
+	max-height: 500px;
+	height: 100%;
+	overflow-y: hidden;
+}
+
+.slide-wrapper {
+	width: 33.333%;
+	height: 100%;
+	float: left;
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+}
+
+.slide {
+	height: 100%;
+	position: relative;
+}
+
+.temp {
+	position: absolute;
+	z-index: 1;
+	color: white;
+	font-size: 100px;
+	bottom: 15px;
+	left: 15px;
+	font-family: 'Josefin Slab', serif;
+	font-weight: 100;
+}
+
+.slide img {
+	position: absolute;
+	z-index: 0;
+	transform: translatex(-100px);
+}
+
+.slide:before {
+	content: '';
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 40%;
+	background: linear-gradient(transparent, black);
+}
+
+.slide div {
+	width: 300px;
+	height: 500px;
+	z-index: 0;
+}
+
+.btns-slider {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.prev-button-slider {
+	border: none;
+	font-family: 'Josefin Slab', serif;
+	font-size: 1.5rem;
+	cursor: pointer;
+	background-color: #555;
+	color: fff;
+	transition: 0.1s ease all;
+}
+.prev-button-slider:hover {
+	background-color: #7d7a7a;
+}
+
+.next-button-slider {
+	border: none;
+	font-family: 'Josefin Slab', serif;
+	color: fff;
+	background-color: #555;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+.next-button-slider:hover {
+	background-color: #7d7a7a;
+}
+
+/* figures --canvas */
+
+.figure {
+	margin: 0 auto;
+
+	max-width: 1000px;
+	overflow: hidden;
+	margin-top: 150px;
+	position: relative;
+	padding: 0 2rem;
+	min-height: auto;
+}
+
+#figure-TextStart {
+	cursor: pointer;
+}
+
+/* Video */
+
+.video {
+	margin-top: 100px;
+	min-height: 500px;
+	text-align: center;
+	margin-bottom: 100px;
+}
+.video-container {
+	position: relative;
+}
+
+video {
+	max-width: 100%;
+	max-height: calc(100vh - 200px);
+	border: 1px solid beige;
+	border-radius: 25px;
+	box-shadow: 2px 2px 4px blanchedalmond;
+}
+
+#play-button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: none;
+	padding: 12px;
+	border-radius: 50%;
+	background-color: #f0f0f0;
+	color: #101010;
+	font-size: 26px;
+	cursor: pointer;
+}
+
+#time {
+	margin-top: 20px;
+	font-size: 24px;
+	text-align: center;
+}
+
+/* UsersFetcher*/
+
+.getData {
+	background-color: blanchedalmond;
+	padding: 20px;
+	margin: 20px auto;
+	width: 80%;
+	border-radius: 5px;
+	filter: drop-shadow(2px 2px 10px beige);
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Стили для кнопок */
+button {
+	padding: 10px 20px;
+	background-color: #4caf50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	margin: 10px;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+.prev-button-fetcher,
+.next-button-fetcher {
+	background-color: #f44336;
+}
+
+.prev-button-fetcher[disabled],
+.next-button-fetcher[disabled] {
+	opacity: 0.4;
+	cursor: not-allowed;
+}
+
+/* Стили для контейнера с данными */
+.data-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Стили для карточки с данными пользователя */
+.card {
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 5px;
+	width: 200px;
+	display: inline-block;
+}
+
+.card img {
+	width: 100%;
+	border-radius: 50%;
+}
+
+.card h3 {
+	margin: 10px 0;
+	font-size: 1.2rem;
+}
+
+.card p {
+	font-size: 0.9rem;
+	margin-top: 5px;
+	color: #555;
+}
+
+/*debounce */
+
+/*--- elements ---*/
+.element {
+	margin: 30px auto 0;
+	max-width: 800px;
+	min-width: 800px;
+}
+.element__title {
+	margin-bottom: 35px;
+	text-align: center;
+	color: blanchedalmond;
+	font-size: 2rem;
+}
+.element__display {
+	width: 800px;
+	height: 400px;
+	border: 1px solid black;
+	margin-top: 10px;
+	position: relative;
+	overflow: hidden;
+}
+.element__button {
+	display: block;
+	margin: auto;
+}
+.element__article {
+	width: 200px;
+	height: 200px;
+	background-color: #05a394;
+	border: 1px solid black;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	-webkit-transition: all 0.8s ease 0s;
+	-o-transition: all 0.8s ease 0s;
+	transition: all 0.8s ease 0s;
+	border-radius: 50px;
+	filter: drop-shadow(5px 5px 4px #c4c4c4);
+	box-shadow: 5px 5px 1px #c4c4c4;
+}
+.article__left {
+	top: 100px;
+	left: -200px;
+}
+.article__left_active {
+	left: 10px;
+}
+.article__right {
+	top: 100px;
+	right: -200px;
+}
+.article__right_active {
+	right: 10px;
+}
+.article__top {
+	top: -200px;
+	left: 300px;
+}
+.article__top_active {
+	top: 10px;
+}
+.element__text {
+	display: block;
+	margin: auto;
+	font-size: 20px;
+}
+
+/* form*/
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 1rem;
+	margin: 1rem auto;
+	border: 1px solid gray;
+	max-width: 400px;
+	margin-top: 100px;
+}
+
+label {
+	font-size: 1.8rem;
+	margin-right: 1rem;
+}
+
+input {
+	font-size: 1.2rem;
+	padding: 0.5rem;
+	border: 1px solid gray;
+	border-radius: 4px;
+	margin-top: 14px;
+	background: linear-gradient(to top left, powderblue, pink);
+
+	outline: none;
+	border: none;
+}
+
+#error-message {
+	margin-top: 1rem;
+	color: red;
+	font-size: 1.2rem;
+}
+
+/* randomize cubes */
+
+.container-cubes {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.random-cubes__btn {
+	padding: 1.5rem 4rem;
+	display: block;
+	margin: 50px auto;
+	font-size: 1.5rem;
+	color: #fff;
+	transition: 0.15s background-color ease;
+}
+
+.random-cubes__btn:hover {
+	background-color: #0c9d4d;
+}
